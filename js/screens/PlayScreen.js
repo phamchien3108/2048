@@ -34,7 +34,8 @@ const style = /* html */ `
         color: #001427;
         font-family: Titillium Web, sans-serif;
         font-size: 30px;
-        background: #1bbc9b;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 27%, rgba(0,212,255,1) 100%);
         width:200px;
         outline: none;
         border: none;
@@ -42,7 +43,8 @@ const style = /* html */ `
         margin-bottom:15px;
     }
     form button:hover {
-        background-color: #007ACC;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,120,142,1) 27%, rgba(0,212,255,1) 100%);
         cursor: pointer;
     }
     .ranking {
@@ -162,6 +164,7 @@ class PlayScreen extends BaseComponent {
                 <h2>Your Current Highscore Is:  ${currentPlayer.hightScores}</h2>
                 
                 <button type='button' class='btn-play'>Play</button>
+                <br>
                 <button type='button' class='btn-log-out'>Log out</button>
                 <br>
                 <button type='button' class='btn-ranking'>Ranking</button>
