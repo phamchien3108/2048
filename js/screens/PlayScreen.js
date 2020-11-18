@@ -35,7 +35,7 @@ const style = /* html */ `
         font-family: Titillium Web, sans-serif;
         font-size: 30px;
         background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 27%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,218,211,1) 27%, rgba(0,212,255,1) 100%);
         width:200px;
         outline: none;
         border: none;
