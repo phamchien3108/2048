@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Caro Zone</title>
+    <meta name="viewport" content="width= device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA1fmmKzVyCwxWvlEdzrDQMPjnkDSmJq6w",
+        authDomain: "ci50-356b8.firebaseapp.com",
+        databaseURL: "https://ci50-356b8.firebaseio.com",
+        projectId: "ci50-356b8",
+        storageBucket: "ci50-356b8.appspot.com",
+        messagingSenderId: "555532422909",
+        appId: "1:555532422909:web:3bcf8fcd41976059c7f894",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="//unpkg.com/navigo@6"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body id="bgr">
+    <div class="title">
+      <img src="./img/logo.png" />
+    </div>
+
+    <div id="current-name"></div>
+    <button id="new-game">New Game</button>
+
+    <div id="current-score"></div>
+    <script type="module" src="./js/game.js"></script>
+  </body>
+</html>
