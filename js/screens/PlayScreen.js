@@ -33,18 +33,26 @@ const style = /* html */ `
     form button {
         color: #001427;
         font-family: Titillium Web, sans-serif;
-        font-size: 30px;
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,218,211,1) 27%, rgba(0,212,255,1) 100%);
+        font-size: 28px;
+        background: rgb(63, 251, 228);
+        background: radial-gradient(
+          circle,
+          rgba(63, 251, 228, 1) 0%,
+          rgba(0, 124, 249, 1) 100%
+        );
         width:200px;
         outline: none;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
         margin-bottom:15px;
     }
     form button:hover {
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,120,142,1) 27%, rgba(0,212,255,1) 100%);
+      background: rgb(63, 251, 228);
+      background: radial-gradient(
+        circle,
+        rgba(63, 251, 228, 1) 0%,
+        rgba(9, 26, 85, 1) 100%
+      );
         cursor: pointer;
     }
     .ranking {
@@ -105,16 +113,26 @@ const style = /* html */ `
         .btn-back {
             color: #001427;
             font-family: Titillium Web, sans-serif;
-            font-size: 30px;
-            background: #1bbc9b;
-            width:200px;
+            font-size: 28px;
+            background: rgb(63, 251, 228);
+            background: radial-gradient(
+              circle,
+              rgba(63, 251, 228, 1) 0%,
+              rgba(0, 124, 249, 1) 100%
+            );
+            width:120px;
             outline: none;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
             margin-bottom:15px;
         }
         .btn-back:hover {
-            background-color: #007ACC;
+          background: rgb(63, 251, 228);
+          background: radial-gradient(
+            circle,
+            rgba(63, 251, 228, 1) 0%,
+            rgba(9, 26, 85, 1) 100%
+          );
             cursor: pointer;
         }
 

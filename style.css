@@ -11,20 +11,70 @@ body {
 
 .title {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 35px;
+  padding: 0 504px;
 }
-
+.content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.content button {
+  color: #001427;
+  font-family: Titillium Web, sans-serif;
+  font-size: 30px;
+  background: rgb(63, 251, 228);
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 228, 1) 0%,
+    rgba(0, 124, 249, 1) 100%
+  );
+  width: 160px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 13px;
+  font-size: 22px;
+}
+#new-game:hover {
+  background: rgb(63, 251, 228);
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 228, 1) 0%,
+    rgba(9, 26, 85, 1) 100%
+  );
+  cursor: pointer;
+}
+.your-score {
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(63, 251, 228);
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 228, 1) 0%,
+    rgba(0, 124, 249, 1) 100%
+  );
+  padding: 3px 10px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
 h1 {
   text-shadow: 2px 2px #001427;
 }
 img {
-  width: 100px;
-  margin-right: 20px;
+  width: 150px;
   border-radius: 20px;
 }
 
@@ -163,9 +213,10 @@ img {
   background-color: none;
 }
 canvas {
-  border:5px solid black;
+  border: 5px solid black;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  background-color: #E6E6E6;
 }
