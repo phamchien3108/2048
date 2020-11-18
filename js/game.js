@@ -2,6 +2,7 @@ class game {
   constructor() {
     this.canvas = null;
     this.context = null;
+    this.score = JSON.parse(localStorage.getItem("Current-Player")).score;
     this.init();
     this.onLoad();
     this.hadchange = false;
@@ -10,11 +11,11 @@ class game {
     this.draw();
     this.handle();
     setInterval(() => {
-      this.score = JSON.parse(localStorage.getItem("Current-Player")).score;
       const scores = document.getElementById("current-score");
       scores.innerHTML = this.score;
     }, 100);
   }
+  
   async changeScore() {
     let CurrentUser = JSON.parse(localStorage.getItem("Current-Player")).email;
     let res = await firebase
@@ -156,7 +157,7 @@ class game {
 
   newgame() {
     this.hadchange = false;
-    this.$gameover = true;
+    this.$gameover = false;
     this.grid = [
       [0, 0, 0, 0],
       [0, 0, 0, 0],
@@ -165,8 +166,10 @@ class game {
     ];
     this.addNum();
     this.score = 0;
+    this.changeScore();
     this.addNum();
     this.draw();
+    console.log(this.score);
   }
 
   slideL(row) {
