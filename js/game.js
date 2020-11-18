@@ -1,5 +1,3 @@
-import { getDataFromDocs } from "../js/utils.js";
-
 class game {
   constructor() {
     this.canvas = null;
@@ -11,6 +9,11 @@ class game {
     this.$newgame = false;
     this.draw();
     this.handle();
+    setInterval(() => {
+      this.score = JSON.parse(localStorage.getItem("Current-Player")).score;
+      const scores = document.getElementById("current-score");
+      scores.innerHTML = this.score;
+    }, 100);
   }
   async changeScore() {
     let CurrentUser = JSON.parse(localStorage.getItem("Current-Player")).email;
@@ -53,9 +56,6 @@ class game {
         });
       }
     }
-    // const ref = await firebase.firestore().collection("users").doc();
-    // console.log(ref.id);
-    // console.log(res.docs[0].data());
     let currentPlayer = JSON.parse(localStorage.getItem("Current-Player"));
     (async () => {
       let response = await firebase
@@ -68,10 +68,6 @@ class game {
     })();
   }
   onLoad() {
-    this.changeScore();
-    this.score = JSON.parse(localStorage.getItem("Current-Player")).score;
-    const scores = document.getElementById("current-score");
-    scores.innerHTML = this.score;
     let arrX = JSON.parse(localStorage.getItem("Current-Player")).arr;
     this.grid = [
       [arrX[0], arrX[1], arrX[2], arrX[3]],
@@ -83,9 +79,6 @@ class game {
       if (arrX[i] != 0) {
         this.$newgame = false;
       }
-    }
-    if (this.$newgame) {
-      this.newgame();
     }
   }
   init() {
@@ -174,8 +167,6 @@ class game {
     this.score = 0;
     this.addNum();
     this.draw();
-    this.changeScore();
-    this.onLoad();
   }
 
   slideL(row) {
@@ -296,7 +287,6 @@ class game {
             alert(`
 				Game Over
 				Your Score is : ${this.score}`);
-            console.log(this.grid);
           }, 2000);
         }
       } else if (e.which == 38) {
@@ -332,7 +322,6 @@ class game {
             alert(`
 				  Game Over
 				  Your Score is : ${this.score}`);
-            console.log(this.grid);
           }, 2000);
         }
       } else if (e.which == 39) {
@@ -361,7 +350,6 @@ class game {
             alert(`
 				  Game Over
 				  Your Score is : ${this.score}`);
-            console.log(this.grid);
           }, 2000);
         }
       } else if (e.which == 40) {
@@ -397,7 +385,6 @@ class game {
             alert(`
 				  Game Over
 				  Your Score is : ${this.score}`);
-            console.log(this.grid);
           }, 2000);
         }
       }
