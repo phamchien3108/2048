@@ -72,7 +72,7 @@ class RegisterScreen extends BaseComponent {
         password: "",
         score: 0,
         hightScores: 0,
-        arr: [],
+        arr: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       },
     };
   }
