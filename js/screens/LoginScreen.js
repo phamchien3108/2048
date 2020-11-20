@@ -8,7 +8,6 @@ const style = /* html */ `
         font-family: 'Titillium Web', sans-serif;
         text-align: center;  
     }
-
     img {
         margin-bottom: 50px;
         max-width:160px;
@@ -16,31 +15,24 @@ const style = /* html */ `
     a {
         color: black;
     }
-
     a:hover {
         font-size:18px;
         transition: all .5s ease-in-out;
     }
-
     .login-screen {
         border: 0;
-        background: url(./img/bgr.jpg) no-repeat center;
-        background-size: cover;
+        background-color: #faf8ef;
         width: 100%;
-        background-attachment: fixed;
-        background-size: cover;
         width: 100%;
-	    min-height:100%;
-        padding: 10em 0 10em;
+	      min-height:100%;
+        padding: 8em 0 10em;
     }
-
     .btn-login {
-        font-family: Titillium Web, sans-serif;
         font-size: 20px;
-        background: #2EFEF7;
-        color: #001427;
+        background-color: #8b8682;
+        color: white;
         border: none;
-        border-radius: 8px;
+        border-radius: 5px;
         outline: none;
         width:100px;
         height: 40px;
@@ -49,11 +41,9 @@ const style = /* html */ `
         margin-bottom: 15px;
     }
     .btn-login:hover {
-        background-color: #607a94;
-        cursor: pointer;
-        
+        background-color: #8f7a66;
+        cursor: pointer; 
     }
-
 </style>
 `;
 

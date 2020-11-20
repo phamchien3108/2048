@@ -21,48 +21,33 @@ const style = /* html */ `
     .play-screen {
         position: absolute;
         border: 0;
-        background: url(./img/bgr.jpg) no-repeat center;
-        background-size: cover;
+        background-color: #faf8ef;
         width: 100%;
-        background-attachment: fixed;
-        background-size: cover;
         width: 100%;
-	    min-height:100%;
+	      min-height:100%;
         padding: 5em 0 5em;
     }
     form button {
-        color: #001427;
+        color: white;
         font-family: Titillium Web, sans-serif;
         font-size: 28px;
-        background: rgb(63, 251, 228);
-        background: radial-gradient(
-          circle,
-          rgba(63, 251, 228, 1) 0%,
-          rgba(0, 124, 249, 1) 100%
-        );
+        background-color: #8b8682;
         width:200px;
         outline: none;
         border: none;
-        border-radius: 15px;
+        border-radius: 5px;
         margin-bottom:15px;
     }
     form button:hover {
-      background: rgb(63, 251, 228);
-      background: radial-gradient(
-        circle,
-        rgba(63, 251, 228, 1) 0%,
-        rgba(9, 26, 85, 1) 100%
-      );
+        background-color: #8f7a66;
         cursor: pointer;
     }
     .ranking {
             border: 0;
-            background: url(./img/bgr.jpg) no-repeat center;
-            background-size: cover;
+            background-color: #faf8ef;;
             width: 100%;
             min-height: 100%;
-            background-attachment: fixed;
-            padding: 5em 0 20em;
+            padding: 1em 0 20em;
         }
         .ranking > header {
             margin: 0 auto;
@@ -88,7 +73,7 @@ const style = /* html */ `
             background: #fff;
         }
         th {
-            background-color: #326295;
+            background-color: #8B7765;
             font-weight: bold;
             color: #fff;
             white-space: nowrap;
@@ -111,28 +96,18 @@ const style = /* html */ `
             text-transform: capitalize;
         }
         .btn-back {
-            color: #001427;
+            color: white;
             font-family: Titillium Web, sans-serif;
             font-size: 28px;
-            background: rgb(63, 251, 228);
-            background: radial-gradient(
-              circle,
-              rgba(63, 251, 228, 1) 0%,
-              rgba(0, 124, 249, 1) 100%
-            );
+            background-color: #8b8682;   
             width:120px;
             outline: none;
             border: none;
-            border-radius: 15px;
+            border-radius: 5px;
             margin-bottom:15px;
         }
         .btn-back:hover {
-          background: rgb(63, 251, 228);
-          background: radial-gradient(
-            circle,
-            rgba(63, 251, 228, 1) 0%,
-            rgba(9, 26, 85, 1) 100%
-          );
+            background-color: #8f7a66;
             cursor: pointer;
         }
 

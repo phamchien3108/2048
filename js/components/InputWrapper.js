@@ -29,8 +29,6 @@ const style = /* html */ `
     }
 
     .input-label:focus, .input-main:focus, .input-error:focus {
-        background: #607a94;
-        color: #001427;
         outline: none;
     }
 

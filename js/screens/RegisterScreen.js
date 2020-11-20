@@ -22,9 +22,7 @@ const style = /* html */ `
     }
     .register-screen {
         border: 0;
-        background: url(./img/bgr.jpg) no-repeat center;
-        background-attachment: fixed;
-        background-size: cover;
+        background-color: #faf8ef;
         width: 100%;
 	    min-height:100%;
         padding: 4em 0 6em;
