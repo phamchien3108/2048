@@ -29,22 +29,21 @@ const style = /* html */ `
     }
 
     .btn-register {
-        color: #ffffff;
+        color: white;
         font-family: Titillium Web, sans-serif;
         font-size: 20px;
-        background:#2EFEF7;
-        color: #001427;
+        background-color: #8b8682;
         border: none;
-        border-radius: 8px;
+        border-radius: 5px;
         outline: none;
         width:140px;
         height: 40px;
         border: 0;
-        margin-top: 15px;
+        margin-top: 5px;
         margin-bottom: 15px;
     }
     .btn-register:hover {
-        background-color: #607a94;
+        background-color: #8f7a66;
         cursor: pointer;
         
     }

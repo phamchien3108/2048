@@ -15,7 +15,7 @@ body {
   padding: 0 33%;
 }
 .title h1 {
-  font-size: 66px;
+  font-size: 76px;
   font-weight: bold;
   color: #776e65;
   font-family: "Anton", sans-serif;
@@ -33,7 +33,7 @@ body {
 #new-game {
   color: white;
   font-size: 22px;
-  width: 160px;
+  width: 140px;
   height: 50px;
   outline: none;
   border: none;
@@ -57,7 +57,7 @@ body {
 }
 .high-score,
 .your-score {
-  width: 160px;
+  width: 140px;
   font-size: 22px;
   color: white;
   font-weight: 500;
@@ -73,9 +73,7 @@ body {
   margin: 3px;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
-h1 {
-  text-shadow: 2px 2px #001427;
-}
+
 img {
   width: 150px;
   border-radius: 20px;
