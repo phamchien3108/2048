@@ -51,9 +51,10 @@ body {
 #current-name,
 #current-score,
 #current-highscore {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: white;
+  text-transform: uppercase;
 }
 #new-game:hover {
   background-color: #8f7a66;
@@ -65,7 +66,7 @@ body {
   width: 140px;
   height: 54px;
   font-size: 16px;
-  color:#E8E8E8;
+  color: #e8e8e8;
   font-weight: 600;
   display: flex;
   justify-content: center;
