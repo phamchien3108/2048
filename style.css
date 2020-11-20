@@ -29,12 +29,13 @@ body {
 .right {
   display: flex;
 }
-#current-name,
+
 #new-game {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 600;
   width: 140px;
-  height: 50px;
+  height: 54px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -44,23 +45,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#new-game {
   background-color: #8b8682;
 }
-#current-name {
-  background-color: #bbada0;
+
+#current-name,
+#current-score,
+#current-highscore {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
 }
 #new-game:hover {
   background-color: #8f7a66;
   cursor: pointer;
 }
+.name,
 .high-score,
 .your-score {
   width: 140px;
-  font-size: 22px;
-  color: white;
-  font-weight: 500;
+  height: 54px;
+  font-size: 16px;
+  color:#E8E8E8;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,9 +75,7 @@ body {
   outline: none;
   border: none;
   border-radius: 5px;
-  padding: 4px 0;
   margin: 3px;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 img {
