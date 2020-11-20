@@ -35,7 +35,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   width: 140px;
-  height: 54px;
+  height: 56px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -51,7 +51,7 @@ body {
 #current-name,
 #current-score,
 #current-highscore {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: white;
   text-transform: uppercase;
@@ -64,7 +64,7 @@ body {
 .high-score,
 .your-score {
   width: 140px;
-  height: 54px;
+  height: 56px;
   font-size: 16px;
   color: #e8e8e8;
   font-weight: 600;
