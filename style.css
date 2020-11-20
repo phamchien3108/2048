@@ -104,63 +104,6 @@ img {
   border-radius: 10px;
   color: #001427;
 }
-
-/* #imgPlayer {
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  margin-top: 20px;
-  background-image: url("./Images/Opng.png");
-  background-repeat: round;
-  background-color: none;
-}
-
-#pgrTime {
-  margin-left: 10px;
-  margin-top: 14px;
-  width: 150px;
-  height: 14px;
-  background-color: #002142;
-} */
-
-/* .square {
-  width: 25px;
-  height: 25px;
-  font-size: 9px;
-  border: #001427 1px solid; */
-/* border-top:#000 1px solid; */
-/* background-color: #fff;
-  background-repeat: round;
-  overflow: hidden;
-  opacity: 0.65;
-  cursor: pointer;
-} */
-
-/* #label1 {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#label2 {
-  margin-top: 10px;
-  margin-left: 35px;
-  float: left;
-}
-
-.button {
-  width: 200px;
-  height: 50px;
-  margin-left: 50px;
-  margin-top: 30px;
-  font-weight: 700;
-  background-color: #002142;
-  cursor: pointer;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 16px;
-  outline: none;
-} */
-
 .button:hover {
   opacity: 0.9;
 }
@@ -169,7 +112,6 @@ img {
   background-color: #007acc;
   outline: none;
 }
-/*  */
 #playground {
   display: flex;
   justify-content: space-around;
@@ -184,35 +126,6 @@ img {
   justify-content: space-between;
 }
 
-.user-container {
-  width: 166px;
-  height: 166px;
-  margin-bottom: 150px;
-  margin-left: 80px;
-  float: right;
-  background-color: #ccc;
-  opacity: 0.8;
-  overflow: hidden;
-  border: 1px solid #001427;
-  border-radius: 10px;
-  color: #001427;
-}
-
-.user {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 15px;
-}
-
-#img1,
-#img2 {
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  margin-top: 20px;
-  background-repeat: round;
-  background-color: none;
-}
 canvas {
   border: 5px solid black;
   position: absolute;

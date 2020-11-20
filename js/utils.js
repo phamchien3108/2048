@@ -18,7 +18,7 @@ export function getDataFromDocs(docs) {
     return data;
 }
 
-// trả về 1 object
+
 export function getDataFromDoc(doc) {
     let data = doc.data();
     data.id = doc.id;

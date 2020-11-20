@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png"
-        href="./img/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <title>2048</title>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
-
-
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries 
-    -->
     <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyA1fmmKzVyCwxWvlEdzrDQMPjnkDSmJq6w",
-          authDomain: "ci50-356b8.firebaseapp.com",
-          databaseURL: "https://ci50-356b8.firebaseio.com",
-          projectId: "ci50-356b8",
-          storageBucket: "ci50-356b8.appspot.com",
-          messagingSenderId: "555532422909",
-          appId: "1:555532422909:web:3bcf8fcd41976059c7f894"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-      </script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyA1fmmKzVyCwxWvlEdzrDQMPjnkDSmJq6w",
+        authDomain: "ci50-356b8.firebaseapp.com",
+        databaseURL: "https://ci50-356b8.firebaseio.com",
+        projectId: "ci50-356b8",
+        storageBucket: "ci50-356b8.appspot.com",
+        messagingSenderId: "555532422909",
+        appId: "1:555532422909:web:3bcf8fcd41976059c7f894",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="//unpkg.com/navigo@6"></script>
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
+      body {
+        padding: 0;
+        margin: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <article id='app'>
-        <!-- <register-screen></register-screen> -->
-        <login-screen></login-screen>
-        <!-- <play-screen></play-screen> -->
+  <body>
+    <article id="app">
+      <login-screen></login-screen>
     </article>
-
-    <script src="./js/index.js" type="module"></script>
-</body>
-
+    <script src="./js/app.js" type="module"></script>
+  </body>
 </html>

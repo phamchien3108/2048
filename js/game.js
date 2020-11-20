@@ -13,9 +13,16 @@ class game {
     setInterval(() => {
       const scores = document.getElementById("current-score");
       scores.innerHTML = this.score;
+      const highScore = document.getElementById("current-highscore");
+      highScore.innerHTML = JSON.parse(
+        localStorage.getItem("Current-Player")
+      ).hightScores;
     }, 100);
+    document.getElementById("current-name").innerHTML = JSON.parse(
+      localStorage.getItem("Current-Player")
+    ).name;
   }
-  
+
   async changeScore() {
     let CurrentUser = JSON.parse(localStorage.getItem("Current-Player")).email;
     let res = await firebase
@@ -102,51 +109,77 @@ class game {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
         if (this.grid[i][j] == 2) {
+          this.context.font = "60px Verdana";
           this.context.fillStyle = "#EEE4DA";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 4) {
+          this.context.font = "60px Verdana";
           this.context.fillStyle = "#EEE1C9";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 8) {
+          this.context.font = "60px Verdana";
           this.context.fillStyle = "#F3B27A";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 16) {
+          this.context.font = "55px Verdana";
           this.context.fillStyle = "#F69664";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 32) {
+          this.context.font = "55px Verdana";
           this.context.fillStyle = "#F77C5F";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 64) {
+          this.context.font = "55px Verdana";
           this.context.fillStyle = "#F75F3B";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 128) {
+          this.context.font = "50px Verdana";
           this.context.fillStyle = "#EDD073";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 256) {
+          this.context.font = "50px Verdana";
           this.context.fillStyle = "#EDCC62";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 512) {
+          this.context.font = "50px Verdana";
           this.context.fillStyle = "#EDC950";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 1024) {
+          this.context.font = "45px Verdana";
           this.context.fillStyle = "#EDC53F";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
         if (this.grid[i][j] == 2048) {
+          this.context.font = "45px Verdana";
           this.context.fillStyle = "#EDC22E";
           this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
         }
+        if (this.grid[i][j] == 4096) {
+          this.context.font = "45px Verdana";
+          this.context.fillStyle = "#DE3163";
+          this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
+        }
+        if (this.grid[i][j] == 8192) {
+          this.context.font = "45px Verdana";
+          this.context.fillStyle = "#C41E3A";
+          this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
+        }
+        if (this.grid[i][j] == 16384) {
+          this.context.font = "40px Verdana";
+          this.context.fillStyle = "#DC143C";
+          this.context.fillRect(j * 125 + 1, i * 125 + 1, 123, 123);
+        }
+
         if (this.grid[i][j] != 0) {
-          this.context.font = "60px Verdana";
           this.context.fillStyle = "black";
           this.context.textAlign = "center";
           this.context.fillText(this.grid[i][j], j * 125 + 62, i * 125 + 85);
@@ -169,7 +202,6 @@ class game {
     this.changeScore();
     this.addNum();
     this.draw();
-    console.log(this.score);
   }
 
   slideL(row) {
@@ -287,10 +319,15 @@ class game {
         this.gameover(this.grid);
         if (this.$gameover) {
           setTimeout(() => {
-            alert(`
-				Game Over
-				Your Score is : ${this.score}`);
-          }, 2000);
+            swal(
+              "Game Over!",
+              `
+            Your Score is : ${this.score}`,
+              "error"
+            ).then(() => {
+              router.navigate("#!/play");
+            });
+          }, 1000);
         }
       } else if (e.which == 38) {
         this.hadchange = false;
@@ -322,10 +359,15 @@ class game {
         this.gameover(this.grid);
         if (this.$gameover) {
           setTimeout(() => {
-            alert(`
-				  Game Over
-				  Your Score is : ${this.score}`);
-          }, 2000);
+            swal(
+              "Game Over!",
+              `
+            Your Score is : ${this.score}`,
+              "error"
+            ).then(() => {
+              router.navigate("#!/play");
+            });
+          }, 1000);
         }
       } else if (e.which == 39) {
         this.hadchange = false;
@@ -350,10 +392,15 @@ class game {
         this.gameover(this.grid);
         if (this.$gameover) {
           setTimeout(() => {
-            alert(`
-				  Game Over
-				  Your Score is : ${this.score}`);
-          }, 2000);
+            swal(
+              "Game Over!",
+              `
+            Your Score is : ${this.score}`,
+              "error"
+            ).then(() => {
+              router.navigate("#!/play");
+            });
+          }, 1000);
         }
       } else if (e.which == 40) {
         this.hadchange = false;
@@ -385,10 +432,15 @@ class game {
         this.gameover(this.grid);
         if (this.$gameover) {
           setTimeout(() => {
-            alert(`
-				  Game Over
-				  Your Score is : ${this.score}`);
-          }, 2000);
+            swal(
+              "Game Over!",
+              `
+            Your Score is : ${this.score}`,
+              "error"
+            ).then(() => {
+              router.navigate("#!/play");
+            });
+          }, 1000);
         }
       }
     });
@@ -399,6 +451,6 @@ let g = new game();
 document.getElementById("new-game").addEventListener("click", () => {
   g.newgame();
   setTimeout(() => {
-    alert("Game bắt đầu");
+    swal("Trò chơi bắt đầu!", "Chúc bạn chơi game vui vẻ!");
   }, 100);
 });
