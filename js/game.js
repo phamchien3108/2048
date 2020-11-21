@@ -25,6 +25,10 @@ class game {
 
   async changeScore() {
     let CurrentUser = JSON.parse(localStorage.getItem("Current-Player")).email;
+    let currentScore = JSON.parse(localStorage.getItem("Current-Player")).score;
+    if(this.score > currentScore){
+      this.audioPlay();
+    }
     let res = await firebase
       .firestore()
       .collection("users")
@@ -63,6 +67,7 @@ class game {
           hightScores: y,
         });
       }
+      
     }
     let currentPlayer = JSON.parse(localStorage.getItem("Current-Player"));
     (async () => {
@@ -263,6 +268,11 @@ class game {
       this.$gameover = true;
     }
   }
+  audioPlay(){
+    let audio = document.getElementById("audio");
+    let play = audio.cloneNode(true).play();
+    console.log('play');
+  }
 
   addNum() {
     let arr = [];
@@ -314,6 +324,7 @@ class game {
 
         if (this.hadchange) {
           this.addNum();
+          
         }
         this.draw();
         this.gameover(this.grid);
