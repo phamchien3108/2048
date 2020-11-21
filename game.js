@@ -271,6 +271,7 @@ class game {
   audioPlay(){
     let audio = document.getElementById("audio");
     let play = audio.cloneNode(true).play();
+    console.log('play');
   }
 
   addNum() {
